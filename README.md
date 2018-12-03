@@ -31,3 +31,6 @@ print("actual code sections")
 
 Plus a lot of other things
 
+Like...
+
+![Adding gifs](https://github.com/ropenscilabs/learngganimate/raw/master/transition_reveal/transition_reveal_files/figure-markdown_github/unnamed-chunk-3-1.gif)
