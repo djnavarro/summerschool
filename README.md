@@ -9,6 +9,8 @@ It's easy to create links to [your favourite website](https://compcogscisydney.o
 
 ![](http://placekitten.com/800/100)
 
+![Puppies are better than kittens](https://images.unsplash.com/photo-1519150268069-c094cfc0b3c8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6e6932150f4fa2cc38e1712f464da47e&auto=format&fit=crop&w=1078&q=80)
+
 It's pretty flexible. Headings:
 
 # First level heading
@@ -19,7 +21,7 @@ It's pretty flexible. Headings:
 
 You can insert block quotes:
 
-> Like this
+> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 
 and you can create `inline code` or 
 
