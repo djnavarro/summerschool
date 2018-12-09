@@ -9,3 +9,14 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## Getting started
+
+The first thing to do in our analysis is load the R
+packages that we'll use to do the work:
+
+```{r}
+library(here)
+library(tidyverse)
+library(skimr)
+```
+

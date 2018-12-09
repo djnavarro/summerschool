@@ -128,7 +128,55 @@ $(document).ready(function () {
 </div>
 
 
-
+<div id="getting-started" class="section level2">
+<h2>Getting started</h2>
+<p>The first thing to do in our analysis is load the R packages that we’ll use to do the work:</p>
+<pre class="r"><code>library(here)
+library(tidyverse)
+library(skimr)</code></pre>
+<p>The next step is to load the data set itself. The data from the sampling frames experiment are stored in the “frames_ex2.csv” file:</p>
+<pre class="r"><code>loc &lt;- here(&quot;analysis&quot;,&quot;data&quot;,&quot;frames_ex2.csv&quot;)
+frames &lt;- read_csv(file = loc)</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   id = col_integer(),
+##   gender = col_character(),
+##   age = col_integer(),
+##   condition = col_character(),
+##   sample_size = col_character(),
+##   n_obs = col_integer(),
+##   test_item = col_integer(),
+##   response = col_integer()
+## )</code></pre>
+<p>The data set has been imported as a tibble. Let’s take a quick look at the data. Each row in the data set is a single response, and each column is a variable:</p>
+<pre class="r"><code>frames</code></pre>
+<pre><code>## # A tibble: 4,725 x 8
+##       id gender   age condition sample_size n_obs test_item response
+##    &lt;int&gt; &lt;chr&gt;  &lt;int&gt; &lt;chr&gt;     &lt;chr&gt;       &lt;int&gt;     &lt;int&gt;    &lt;int&gt;
+##  1     1 male      36 category  small           2         1        8
+##  2     1 male      36 category  small           2         2        7
+##  3     1 male      36 category  small           2         3        6
+##  4     1 male      36 category  small           2         4        6
+##  5     1 male      36 category  small           2         5        5
+##  6     1 male      36 category  small           2         6        6
+##  7     1 male      36 category  small           2         7        3
+##  8     1 male      36 category  medium          6         1        9
+##  9     1 male      36 category  medium          6         2        7
+## 10     1 male      36 category  medium          6         3        5
+## # ... with 4,715 more rows</code></pre>
+<p>An alternative way to view the a tibble that sometimes looks nicer is to use the <code>glimpse()</code> function:</p>
+<pre class="r"><code>glimpse(frames)</code></pre>
+<pre><code>## Observations: 4,725
+## Variables: 8
+## $ id          &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,...
+## $ gender      &lt;chr&gt; &quot;male&quot;, &quot;male&quot;, &quot;male&quot;, &quot;male&quot;, &quot;male&quot;, &quot;male&quot;, &quot;m...
+## $ age         &lt;int&gt; 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36...
+## $ condition   &lt;chr&gt; &quot;category&quot;, &quot;category&quot;, &quot;category&quot;, &quot;category&quot;, &quot;c...
+## $ sample_size &lt;chr&gt; &quot;small&quot;, &quot;small&quot;, &quot;small&quot;, &quot;small&quot;, &quot;small&quot;, &quot;smal...
+## $ n_obs       &lt;int&gt; 2, 2, 2, 2, 2, 2, 2, 6, 6, 6, 6, 6, 6, 6, 12, 12, ...
+## $ test_item   &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7, 1, 2, 3,...
+## $ response    &lt;int&gt; 8, 7, 6, 6, 5, 6, 3, 9, 7, 5, 6, 4, 4, 2, 8, 7, 6,...</code></pre>
+</div>
 
 
 

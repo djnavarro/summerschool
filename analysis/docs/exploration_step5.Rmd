@@ -1,0 +1,52 @@
+---
+title: "Exploring the data"
+author: "Danielle Navarro"
+date: "4 December 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Getting started
+
+The first thing to do in our analysis is load the R
+packages that we'll use to do the work:
+
+```{r packageload, message=FALSE}
+library(here)
+library(tidyverse)
+library(skimr)
+```
+
+The next step is to load the data set itself. The data 
+from the sampling frames experiment are stored in the 
+"frames_ex2.csv" file:
+
+```{r dataimport}
+loc <- here("analysis","data","frames_ex2.csv")
+frames <- read_csv(file = loc)
+```
+
+The data set has been imported as a tibble. Let's take 
+a quick look at the data. Each row in the data set is
+a single response, and each column is a variable:
+
+```{r printframes}
+frames
+```
+
+An alternative way to view the a tibble that sometimes
+looks nicer is to use the `glimpse()` function:
+
+```{r glimpseframes}
+glimpse(frames)
+```
+
+Finally, as a quick first pass, we can use the `skim()`
+function to get a simple overview of each variable:
+
+```{r skimframes}
+skim(frames)
+```
