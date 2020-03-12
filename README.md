@@ -1,4 +1,4 @@
-# Summer School
+# Learning git
 
 This is Danielle's very exciting summer school repository, which I've created to accompany the Day 2 schedule. The overall schedule of the day is:
 
